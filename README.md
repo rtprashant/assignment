@@ -1,6 +1,6 @@
 # Everyday UI
 
-Simple responsive React and Tailwind components for the assessment. The listing uses `useFetchData` and `API.ALL_PRODUCTS(12, 0)` to display the API response, with loading and error states. Filtering controls are still UI only.
+Simple responsive React and Tailwind components for the assessment. The listing uses `useFetchData` and `API.ALL_PRODUCTS(12, 0)` to display the API response, with loading and error states. 
 
 ```sh
 npm install

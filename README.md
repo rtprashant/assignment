@@ -9,7 +9,6 @@ npm run dev
 
 - `src/components/`: filters, search field, toolbar, product cards, pagination, and product detail UI.
 - `src/pages/`: listing and detail page layouts.
-- `src/assets/products.js`: sample products, categories, and brands.
 - `src/hooks/useFetchData.js`: shared Axios fetching hook.
 - `src/api/main.js`: API endpoint definitions.
 

@@ -22,15 +22,13 @@ npm run preview
 
 The build is saved in `dist/`. When hosting it, configure your server to serve `index.html` for app routes so opening `/product/1` directly works.
 
-To check the code and run the browser tests:
+To check the code:
 
 ```sh
 npm run lint
-npx playwright install chromium
-npm run test:browser
 ```
 
-Playwright starts the development server automatically, or reuses one running on port 5173. The tests cover product details, error recovery, reviews, filters, pagination, and responsive layouts. Key API responses are mocked to make these checks repeatable. Use `npm run format` to format the project.
+Use `npm run format` to format the project.
 
 ## Assumptions made
 
@@ -51,7 +49,6 @@ The code is organized by responsibility:
 - `src/components/` contains filters, cards, pagination, the gallery, reviews, and shared feedback UI.
 - `src/api/main.js` builds API URLs in one place.
 - `src/hooks/useFetchData.js` handles loading, errors, retries, and cancellation of requests that are no longer needed.
-- `tests/store.spec.js` contains the Playwright browser checks.
 
 The listing page owns filter, sort, and pagination state and passes values and callbacks to its child components. This keeps controls and results in sync without adding a global state library. Search waits 400 milliseconds after typing before updating the request.
 
@@ -68,5 +65,5 @@ Loading indicators, retry actions, native form controls, and a responsive grid p
 - Save filters, sorting, and the current page in the URL so results can be bookmarked and restored after viewing a product.
 - Add a clear empty-results message and explain when the minimum price exceeds the maximum.
 - Replace placeholder stock and delivery information with the corresponding API fields.
-- Expand browser coverage for search and sorting combinations, rapid filter changes, and negative price input. Add a fuller keyboard and accessibility review.
-- Remove unused starter assets and sample data, and add automated lint, build, and test checks to CI.
+- Add a fuller keyboard and accessibility review.
+- Remove unused starter assets and sample data, and add automated lint and build checks to CI.

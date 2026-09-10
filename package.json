@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:browser": "playwright test",
-    "format": "prettier --write src tests *.js *.json index.html README.md"
+    "format": "prettier --write src *.js *.json index.html README.md"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -22,7 +21,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "^1.63.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^6.1.0",
